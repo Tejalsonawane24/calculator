@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     EditText ed2;
-    Button btnp,btnd,btn7,btn8,btn9,btnm,btn4,btn5,btn6,btns,btn1,btn2,btn3,btna;
+    Button btnp,btnd,btn7,btn8,btn9,btnm,btn4,btn5,btn6,btns,btn1,btn2,btn3,btna,btntz,btnz,btnpo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         btn2=findViewById(R.id.two);
         btn3=findViewById(R.id.three);
         btna=findViewById(R.id.plus);
+        btntz=findViewById(R.id.twozero);
+        btnz=findViewById(R.id.zero);
+        btnpo=findViewById(R.id.point);
 
         //Event Handling
         btnp.setOnClickListener(new View.OnClickListener(){
@@ -120,6 +123,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ed2.setText("+");
+            }
+        });
+        btntz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ed2.setText("00");
+            }
+        });
+        btnz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ed2.setText("0");
+            }
+        });
+        btnpo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ed2.setText(".");
             }
         });
     }

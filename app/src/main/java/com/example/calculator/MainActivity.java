@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         btna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ed2.setText();
+                ed2.setText("+");
             }
         });
     }

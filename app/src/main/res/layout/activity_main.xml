@@ -34,18 +34,18 @@
     <LinearLayout
         android:id="@+id/l2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="205dp"
         android:layout_below="@+id/l1"
         android:layout_alignBottom="@+id/l1"
         android:layout_marginTop="13dp"
-        android:layout_marginBottom="-250dp"
+        android:layout_marginBottom="-218dp"
         android:orientation="vertical">
 
 
         <EditText
             android:id="@+id/text1"
             android:layout_width="match_parent"
-            android:layout_height="82dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberSigned" />
@@ -53,7 +53,7 @@
         <EditText
             android:id="@+id/text2"
             android:layout_width="match_parent"
-            android:layout_height="105dp"
+            android:layout_height="63dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberSigned" />

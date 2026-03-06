@@ -11,6 +11,10 @@
         android:layout_height="50dp"
         android:id="@+id/l1"
         android:layout_alignParentTop="true">
+       <View
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"/>
         <Button
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -20,7 +24,7 @@
            android:layout_width="50dp"
            android:layout_height="50dp"
            android:id="@+id/measures"
-        android:text="m"   />
+           android:text="m" />
 
         <ImageButton
             android:id="@+id/moreoption"

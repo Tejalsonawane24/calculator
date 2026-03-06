@@ -14,7 +14,6 @@
         <Button
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="250dp"
             android:id="@+id/advance"
             android:text="h"/>
        <Button
@@ -36,9 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="205dp"
         android:layout_below="@+id/l1"
-        android:layout_alignBottom="@+id/l1"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="-218dp"
         android:orientation="vertical">
 
 
@@ -63,7 +59,6 @@
         android:layout_width="match_parent"
         android:layout_height="460dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="8dp"
         android:columnCount="4"
         android:padding="8dp"
         android:rowCount="5"

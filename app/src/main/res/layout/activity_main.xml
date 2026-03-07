@@ -11,7 +11,7 @@
         android:layout_height="50dp"
         android:id="@+id/l1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layuot_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="horizontal">
        <View

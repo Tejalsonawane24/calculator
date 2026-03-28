@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="calcbutton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetLeft">4dp</item>
+        <item name="android:insetRight">4dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.Circle</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Circle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

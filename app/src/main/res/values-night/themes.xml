@@ -3,5 +3,7 @@
     <style name="Base.Theme.Calculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="calcButtonBackground">#000000</item>
+        <item name="calcButtonText">#FFFFFF</item>
     </style>
 </resources>

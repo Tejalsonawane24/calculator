@@ -19,11 +19,12 @@
            android:layout_width="0dp"
            android:layout_height="match_parent"
            android:layout_weight="1"/>
-        <Button
+        <ToggleButton
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:id="@+id/advance"
-            android:text="h"/>
+            android:id="@+id/more_button"
+            android:textOn="h"
+            android:textOff="l"/>
        <Button
            android:layout_width="50dp"
            android:layout_height="50dp"
@@ -81,35 +82,51 @@
     <GridLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:columnCount="4"
+        android:columnCount="5"
         android:padding="8dp"
-        android:rowCount="5"
+        android:rowCount="7"
         android:id="@+id/l3"
         app:layout_constraintTop_toBottomOf="@id/l2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.6">
+        app:layout_constraintVertical_weight="6">
+<!--        app:layout_constraintHeight_percent="0.6"-->
 
-        <Button android:id="@+id/AC" android:text="AC" style="@style/calcbutton"/>
-        <Button android:id="@+id/percent" android:text="%"  style="@style/calcbutton"/>
-        <Button android:id="@+id/erase" android:text="C" style="@style/calcbutton" />
-        <Button android:id="@+id/divide" android:text="/"  style="@style/calcbutton"/>
-        <Button android:id="@+id/seven" android:text="7"  style="@style/calcbutton"/>
-        <Button android:id="@+id/eight" android:text="8" style="@style/calcbutton"/>
-        <Button android:id="@+id/nine" android:text="9" style="@style/calcbutton"/>
-        <Button android:id="@+id/multiply" android:text="X"  style="@style/calcbutton"/>
-        <Button android:id="@+id/four" android:text="4" style="@style/calcbutton"/>
-        <Button android:id="@+id/five" android:text="5"  style="@style/calcbutton"/>
-        <Button android:id="@+id/six" android:text="6"  style="@style/calcbutton"/>
-        <Button android:id="@+id/subtract" android:text="-"  style="@style/calcbutton"/>
-        <Button android:id="@+id/one" style="@style/calcbutton" android:text="1" />
-        <Button android:id="@+id/two" style="@style/calcbutton" android:text="2" />
-        <Button android:id="@+id/three" style="@style/calcbutton" android:text="3" />
-        <Button android:id="@+id/plus" style="@style/calcbutton" android:text="+" />
-        <Button android:id="@+id/twozero" style="@style/calcbutton" android:text="00"/>
-        <Button android:id="@+id/zero" style="@style/calcbutton" android:text="0"/>
-        <Button android:id="@+id/point" style="@style/calcbutton" android:text="." />
-        <Button android:id="@+id/equal" style="@style/calcbutton" android:text="=" />
+<!--        <Button android:id="@+id/sin" android:text="sin" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/cos" android:text="cos" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/tan" android:text="tan" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/rad" android:text="rad" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/deg" android:text="deg" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/log" android:text="log" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/ln" android:text="ln" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/rounds" android:text="(" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/rounde" android:text=")" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/inv" android:text="inv" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/not" android:text="!" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/AC" android:text="AC" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/percent" android:text="%"  style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/erase" android:text="C" style="@style/calcbutton" />-->
+<!--        <Button android:id="@+id/divide" android:text="/"  style="@style/calcbutton"/>-->
+<!--&lt;!&ndash;        <Button android:id="@+id/power" android:text="^" style="@style/calcbutton"/>&ndash;&gt;-->
+<!--        <Button android:id="@+id/seven" android:text="7"  style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/eight" android:text="8" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/nine" android:text="9" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/multiply" android:text="X"  style="@style/calcbutton"/>-->
+<!--&lt;!&ndash;        <Button android:id="@+id/sqrt" android:text="sq" style="@style/calcbutton"/>&ndash;&gt;-->
+<!--        <Button android:id="@+id/four" android:text="4" style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/five" android:text="5"  style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/six" android:text="6"  style="@style/calcbutton"/>-->
+<!--        <Button android:id="@+id/subtract" android:text="-"  style="@style/calcbutton"/>-->
+<!--&lt;!&ndash;        <Button android:id="@+id/pi" android:text="pi" style="@style/calcbutton"/>&ndash;&gt;-->
+<!--        <Button android:id="@+id/one" style="@style/calcbutton" android:text="1" />-->
+<!--        <Button android:id="@+id/two" style="@style/calcbutton" android:text="2" />-->
+<!--        <Button android:id="@+id/three" style="@style/calcbutton" android:text="3" />-->
+<!--        <Button android:id="@+id/plus" style="@style/calcbutton" android:text="+" />-->
+<!--&lt;!&ndash;        <Button android:id="@+id/e" style="@style/calcbutton" android:text="e"/>&ndash;&gt;-->
+<!--        <Button android:id="@+id/twozero" style="@style/calcbutton" android:text="00"/>-->
+<!--        <Button android:id="@+id/zero" style="@style/calcbutton" android:text="0"/>-->
+<!--        <Button android:id="@+id/point" style="@style/calcbutton" android:text="." />-->
+<!--        <Button android:id="@+id/equal" style="@style/calcbutton" android:text="=" />-->
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

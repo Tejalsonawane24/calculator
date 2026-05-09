@@ -29,7 +29,8 @@
            android:layout_width="50dp"
            android:layout_height="50dp"
            android:id="@+id/measures"
-           android:text="m" />
+           android:text="m"
+           android:onClick="showMeasurements"/>
 
         <ImageButton
             android:id="@+id/moreoption"

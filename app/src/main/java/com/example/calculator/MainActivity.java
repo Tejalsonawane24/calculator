@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -16,10 +17,11 @@ import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.ToggleButton;
 
+
 public class MainActivity extends AppCompatActivity {
 
     //Defining objects
-    Button btnp,btnd,btn7,btn8,btn9,btnx,btn4,btn5,btn6,btnm,btn1,btn2,btn3,btna,btnzz,btnz,btnf;
+    Button btnp,btnd,btn7,btn8,btn9,btnx,btn4,btn5,btn6,btnm,btn1,btn2,btn3,btna,btnzz,btnz,btnf,btnmrop;
     ToggleButton mrbtn;
     EditText ed1,ed2;
     GridLayout gridLayout;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         ed2= findViewById(R.id.text2);
         gridLayout=findViewById(R.id.l3);
         mrbtn=findViewById(R.id.more_button);
+        btnmrop=findViewById(R.id.measures);
         if(ed2==null){
             throw new IllegalStateException("Views not found");
         }
@@ -187,7 +190,10 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("CalculatorError","Error toggling grid:"+e.getMessage() );
             }
         });
-
+    }
+    public void showMeasurements(View view) {
+        Intent intent = new Intent(getApplicationContext(), Measurements.class);
+        startActivity(intent);
     }
     private Button createStyledButton(String text)
     {
@@ -233,6 +239,7 @@ if(gridLayout==null||ed2==null)return;
 
         for(int i=0;i<totalButtons;i++){
             Button button= createStyledButton(keys[i]);
+            button.setTextSize(13);
             gridLayout.addView(button);
         }
     }
@@ -250,6 +257,7 @@ if(gridLayout==null||ed2==null)return;
 
         for(int i=0;i<totalButtons;i++){
             Button button=createStyledButton(keys[i]);
+            button.setTextSize(24);
             gridLayout.addView(button);
         }
     }

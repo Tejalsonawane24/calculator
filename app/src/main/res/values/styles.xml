@@ -14,8 +14,23 @@
         <item name="android:backgroundTint">?attr/calcButtonBackground</item>
         <item name="android:textColor">?attr/calcButtonText</item>
     </style>
-
     <style name="ShapeAppearance.App.Circle" parent="">
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="unitconbtn" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:insetBottom">5dp</item>
+        <item name="android:insetTop">5dp</item>
+        <item name="android:insetLeft">5dp</item>
+        <item name="android:insetRight">5dp</item>
+        <item name="android:textSize">14sp</item>
+<!--        <item name="android:padding">5dp</item>-->
+        <item name="android:backgroundTint">?attr/calcButtonBackground</item>
+        <item name="android:textColor">?attr/calcButtonText</item>
+        <item name="cornerRadius">16dp</item>
     </style>
 </resources>

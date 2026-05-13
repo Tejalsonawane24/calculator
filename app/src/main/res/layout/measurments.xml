@@ -1,10 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<Button
-    android:layout_width="150dp"
-    android:layout_height="150dp"
-    android:text="hello"
-    android:textSize="20dp"/>
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ml1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="b"
+            android:textSize="12dp"
+            android:backgroundTint="?attr/calcButtonBackground"
+            android:textColor="?attr/calcButtonText"
+            android:id="@+id/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unit Converter"
+            android:textSize="20dp"
+            android:textAlignment="inherit"
+            android:textColor="?attr/calcButtonText"
+            android:backgroundTint="?attr/calcButtonBackground"/>
+    </LinearLayout>
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:rowCount="5"
+        android:id="@+id/ml2"
+        app:layout_constraintTop_toBottomOf="@+id/ml1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="6"
+        android:padding="10dp">
+        <Button
+            android:id="@+id/currency"
+            android:text="Currency"
+            style="@style/unitconbtn"/>
+        <Button
+            android:id="@+id/length"
+            android:text="Length"
+            style="@style/unitconbtn"/>
+        <Button
+            android:id="@+id/area"
+            android:text="Area"
+            style="@style/unitconbtn"/>
+        <Button
+            android:id="@+id/volume"
+            android:text="Volume"
+            style="@style/unitconbtn"/>
+        <Button
+            android:id="@+id/weight"
+            android:text="Weight"
+            style="@style/unitconbtn"/>
+        <Button
+            android:id="@+id/temprature"
+            android:text="Temprature"
+            style="@style/unitconbtn"/>
+        <Button
+            android:id="@+id/speed"
+            android:text="Speed"
+            style="@style/unitconbtn"/>
+        <Button
+            android:id="@+id/pressure"
+            android:text="Pressure"
+            style="@style/unitconbtn"/>
+        <Button
+            android:id="@+id/power"
+            android:text="Power"
+            style="@style/unitconbtn"/>
+        <Button
+            android:id="@+id/numbersys"
+            android:text="Number System"
+            style="@style/unitconbtn"/>
+       <View style="@style/unitconbtn"/>
+        <View style="@style/unitconbtn"/>
+        <View style="@style/unitconbtn"/>
+    </GridLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

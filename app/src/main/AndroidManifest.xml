@@ -21,6 +21,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".Measurements"/>
+        <activity android:name=".CurrencyPage"/>
+        <activity android:name=".AreaPage"/>
+        <activity android:name=".LengthPage"/>
+        <activity android:name=".NumberSystemPage"/>
+        <activity android:name=".PowerPage"/>
+        <activity android:name=".PressurePage"/>
+        <activity android:name=".SpeedPage"/>
+        <activity android:name=".TempraturePage"/>
+        <activity android:name=".VolumePage"/>
+        <activity android:name=".WeightPage"/>
 
     </application>
 

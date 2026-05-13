@@ -20,7 +20,8 @@
             android:textSize="12dp"
             android:backgroundTint="?attr/calcButtonBackground"
             android:textColor="?attr/calcButtonText"
-            android:id="@+id/back"/>
+            android:id="@+id/back"
+            android:onClick="showHome"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,43 +46,54 @@
         <Button
             android:id="@+id/currency"
             android:text="Currency"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showCurrency"/>
         <Button
             android:id="@+id/length"
             android:text="Length"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showLength"/>
         <Button
             android:id="@+id/area"
             android:text="Area"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showArea"/>
         <Button
             android:id="@+id/volume"
             android:text="Volume"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showVolume"/>
         <Button
             android:id="@+id/weight"
             android:text="Weight"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showWeight"/>
         <Button
             android:id="@+id/temprature"
             android:text="Temprature"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showTemprature"/>
         <Button
             android:id="@+id/speed"
             android:text="Speed"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showSpeed"/>
         <Button
             android:id="@+id/pressure"
             android:text="Pressure"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showPressure"/>
         <Button
             android:id="@+id/power"
             android:text="Power"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showPower"/>
         <Button
             android:id="@+id/numbersys"
             android:text="Number System"
-            style="@style/unitconbtn"/>
+            style="@style/unitconbtn"
+            android:onClick="showNumberSys"/>
+
        <View style="@style/unitconbtn"/>
         <View style="@style/unitconbtn"/>
         <View style="@style/unitconbtn"/>

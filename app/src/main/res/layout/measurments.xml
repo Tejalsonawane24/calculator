@@ -17,7 +17,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:text="b"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:backgroundTint="?attr/calcButtonBackground"
             android:textColor="?attr/calcButtonText"
             android:id="@+id/back"
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Unit Converter"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textAlignment="inherit"
             android:textColor="?attr/calcButtonText"
             android:backgroundTint="?attr/calcButtonBackground"/>

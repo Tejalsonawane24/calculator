@@ -1,3 +1,77 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string-array name="ccsp1">
+        <item>Algerian Dinar DZD</item>
+        <item>Argentine Peso ARS</item>
+        <item>Australian Dollar AUD</item>
+        <item>Bahrain Dinar BHD</item>
+        <item>Belarus Ruble BYN</item>
+        <item>Brazilian Real BRL</item>
+        <item>Brunei Ringgit BND</item>
+        <item>Bulgarian Lev BGN</item>
+        <item>Cambodian Riel KHR</item>
+        <item>Canadian Dollar CAD</item>
+        <item>Chilean Peso CLP</item>
+        <item>Chinese Yuan CNY</item>
+        <item>Colombian Peso COP</item>
+        <item>Costa Rican Colon CRC</item>
+        <item>Czech Crown CZK</item>
+        <item>Danish Krone CZK</item>
+        <item>Egyptian Pound EGP</item>
+        <item>Euro EUR</item>
+        <item>Hong Kong Dollar</item>
+        <item>Hungarian Forint HUF</item>
+        <item>Icelandic Krona ISK</item>
+        <item>Indian Rupee INR</item>
+        <item>Indonesian Rupiah IDR</item>
+        <item>Iranian Rial IRR</item>
+        <item>Iraqi Dinar IQD</item>
+        <item>Israel New Shekel ILS</item>
+        <item>Japanese Yen JPY</item>
+        <item>Jordanian Dinar JOD</item>
+        <item>Kazakhstani Tenge KZT</item>
+        <item>Kenya Shilling KES</item>
+        <item>Kuwaiti Dinar KWD</item>
+        <item>Kyat MMK</item>
+        <item>Lao Kip LAK</item>
+        <item>Lebanese Pound LBP</item>
+        <item>Macau Pataca MOP</item>
+        <item>Malaysian Ringgit MYR</item>
+        <item>Mexican Peso </item>
+        <item>Moldovan Leu MDL</item>
+        <item>Moroccan Dirham MAD</item>
+        <item>Naira NGN</item>
+        <item>Nepalese Rupee NPR</item>
+        <item>New Taiwan dollar TWD</item>
+        <item>New Zealand Dollar</item>
+        <item>Norwegian Krone NOK</item>
+        <item>Omani Rial OMR</item>
+        <item>Pakistani Rupee PKR</item>
+        <item>Philippine Peso PHP</item>
+        <item>Polish Zloty PLN</item>
+        <item>Pound Sterling GBP</item>
+        <item>Qatari Riyal QAR</item>
+        <item>Romanian Leu RON</item>
+        <item>Russian Ruble RUB</item>
+        <item>Saudi Riyal SAR</item>
+        <item>Singapore Dollar</item>
+        <item>South African Rand ZAR</item>
+        <item>Sri Lanka Rupee</item>
+        <item>Swedish Krona SEK</item>
+        <item>Swiss Franc CHF</item>
+        <item>Syrian Pound SYP</item>
+        <item>Taka BDT</item>
+        <item>Tanzania Shilling TZS</item>
+        <item>Thai Baht THB</item>
+        <item>Tunisian Dinar TND</item>
+        <item>Turkish Lira TRY</item>
+        <item>UAE Dirham AED</item>
+        <item>Uganda Shilling UGX</item>
+        <item>Ukrainian Hryvnia UAH </item>
+        <item>US Dollar USD</item>
+        <item>Uzbekistani Som UZS</item>
+        <item>Vietnamese Dong VND</item>
+        <item>Won KRW </item>
+        <item>Zambian Kwacha ZMW</item>
+    </string-array>
 </resources>

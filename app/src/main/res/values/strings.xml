@@ -74,4 +74,80 @@
         <item>Won KRW </item>
         <item>Zambian Kwacha ZMW</item>
     </string-array>
+
+    <string-array name="currency_value">
+        <item>134.50</item> <!-- DZD -->
+        <item>892.10</item> <!-- ARS -->
+        <item>1.52</item>   <!-- AUD -->
+        <item>0.377</item>  <!-- BHD -->
+        <item>3.28</item>   <!-- BYN -->
+        <item>5.65</item>   <!-- BRL -->
+        <item>1.35</item>   <!-- BND -->
+        <item>1.80</item>   <!-- BGN -->
+        <item>4100.0</item> <!-- KHR -->
+        <item>1.38</item>   <!-- CAD -->
+        <item>920.0</item>  <!-- CLP -->
+        <item>7.24</item>   <!-- CNY -->
+        <item>3950.0</item> <!-- COP -->
+        <item>508.0</item>  <!-- CRC -->
+        <item>23.40</item>  <!-- CZK -->
+        <item>6.90</item>   <!-- DKK -->
+        <item>47.80</item>  <!-- EGP -->
+        <item>0.92</item>   <!-- EUR -->
+        <item>7.82</item>   <!-- HKD -->
+        <item>362.50</item> <!-- HUF -->
+        <item>138.0</item>  <!-- ISK -->
+        <item>96.08</item>  <!-- INR -->
+        <item>16100.0</item><!-- IDR -->
+        <item>42000.0</item><!-- IRR -->
+        <item>1310.0</item> <!-- IQD -->
+        <item>3.68</item>   <!-- ILS -->
+        <item>156.20</item> <!-- JPY -->
+        <item>0.709</item>  <!-- JOD -->
+        <item>450.0</item>  <!-- KZT -->
+        <item>130.0</item>  <!-- KES -->
+        <item>0.308</item>  <!-- KWD -->
+        <item>2100.0</item> <!-- MMK -->
+        <item>22000.0</item><!-- LAK -->
+        <item>89500.0</item><!-- LBP -->
+        <item>8.05</item>   <!-- MOP -->
+        <item>4.68</item>   <!-- MYR -->
+        <item>16.80</item>  <!-- MXN -->
+        <item>17.75</item>  <!-- MDL -->
+        <item>10.05</item>  <!-- MAD -->
+        <item>1450.0</item> <!-- NGN -->
+        <item>133.50</item> <!-- NPR -->
+        <item>32.40</item>  <!-- TWD -->
+        <item>1.66</item>   <!-- NZD -->
+        <item>10.65</item>  <!-- NOK -->
+        <item>0.385</item>  <!-- OMR -->
+        <item>278.50</item> <!-- PKR -->
+        <item>57.80</item>  <!-- PHP -->
+        <item>3.98</item>   <!-- PLN -->
+        <item>0.79</item>   <!-- GBP -->
+        <item>3.64</item>   <!-- QAR -->
+        <item>4.58</item>   <!-- RON -->
+        <item>91.50</item>  <!-- RUB -->
+        <item>3.75</item>   <!-- SAR -->
+        <item>1.35</item>   <!-- SGD -->
+        <item>18.45</item>  <!-- ZAR -->
+        <item>300.0</item>  <!-- LKR -->
+        <item>10.50</item>  <!-- SEK -->
+        <item>0.91</item>   <!-- CHF -->
+        <item>13000.0</item><!-- SYP -->
+        <item>117.0</item>  <!-- BDT -->
+        <item>2580.0</item> <!-- TZS -->
+        <item>36.40</item>  <!-- THB -->
+        <item>3.12</item>   <!-- TND -->
+        <item>32.50</item>  <!-- TRY -->
+        <item>3.67</item>   <!-- AED -->
+        <item>3750.0</item> <!-- UGX -->
+        <item>39.60</item>  <!-- UAH -->
+        <item>1.0</item>    <!-- USD (Base) -->
+        <item>12600.0</item><!-- UZS -->
+        <item>25400.0</item><!-- VND -->
+        <item>1375.0</item> <!-- KRW -->
+        <item>25.20</item>
+    </string-array>
+
 </resources>

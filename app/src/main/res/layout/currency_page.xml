@@ -133,11 +133,13 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@android:drawable/stat_notify_sync"
-                android:tint="@android:color/white"/>
+                android:tint="?attr/calcButtonText"
+                android:backgroundTint="?attr/calcButtonBackground"
+                android:onClick="swap"/>
         </LinearLayout>
 
     </LinearLayout>

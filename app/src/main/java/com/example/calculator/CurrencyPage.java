@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -57,5 +58,30 @@ public class CurrencyPage extends AppCompatActivity {
                 Toast.makeText(CurrencyPage.this,"Selected:Not Yet",Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    // Method signature must include View view to be compatible with android:onClick
+    public void swap(View view){
+        Spinner sp1 = findViewById(R.id.sp1);
+        Spinner sp2 = findViewById(R.id.sp2);
+        EditText ed1 = findViewById(R.id.edcc1);
+        EditText ed2 = findViewById(R.id.edcc2);
+
+        int se1 = sp1.getSelectedItemPosition();
+        int se2 = sp2.getSelectedItemPosition();
+
+        sp1.setSelection(se2);
+        sp2.setSelection(se1);
+
+        String str1 = ed1.getText().toString();
+        String str2 = ed2.getText().toString();
+
+        ed1.setText(str2);
+        ed2.setText(str1);
+    }
+
+    public void showMeasurements(View view) {
+        Intent i=new Intent(getApplicationContext(), Measurements.class);
+        startActivity(i);
     }
 }

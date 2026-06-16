@@ -84,4 +84,5 @@ public class CurrencyPage extends AppCompatActivity {
         Intent i=new Intent(getApplicationContext(), Measurements.class);
         startActivity(i);
     }
+
 }

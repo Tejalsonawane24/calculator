@@ -149,5 +149,98 @@
         <item>1375.0</item> <!-- KRW -->
         <item>25.20</item>
     </string-array>
-
+    <string-array name="lcsp1">
+        <item>Decimeter(dm)</item>
+        <item>Light year(ly)</item>
+        <item>Millimeter(mm)</item>
+        <item>Kilometer(kl)</item>
+        <item>Centimeter(cm)</item>
+        <item>Meter(m)</item>
+        <item>Micrometer(μm)</item>
+        <item>Parsec(pc)</item>
+        <item>Astronomical Unit(au)</item>
+        <item>Lunar distance(LD)</item>
+        <item>Picometer(pm)</item>
+        <item>Nanometer(nm)</item>
+        <item>Furlong(fur)</item>
+        <item>Fathom(fm)</item>
+        <item>Yard(yd)</item>
+        <item>Nautical mile(nmi)</item>
+        <item>Foot(ft)</item>
+        <item>Mile(mi)</item>
+        <item>Inch(in)</item>
+        <item>Zhang</item>
+        <item>Fen</item>
+        <item>Hao</item>
+        <item>Chi</item>
+        <item>Li</item>
+        <item>Cun</item>
+        <item>Li</item>
+    </string-array>
+    <string-array name="length_value">
+        <item>1.0e-12</item>
+        <item >1.0e-9</item>
+       <item>1.0e-6</item>
+        <item>0.001</item>
+       <item>0.01</item>
+        <item>0.1</item>
+       <item>1.0</item>
+        <item>1000.0</item>
+        <item>0.0254</item>
+        <item>0.3048</item>
+        <item>0.9144</item>
+        <item>1609.344</item>
+        <item>1.8288</item>
+        <item>201.168</item>
+        <item>1852.0</item>
+        <item>1.495978707e11</item>
+        <item>3.84402e8</item>
+        <item>9.4607304725808e15</item>
+        <item>3.085677581e16</item>
+        <item>1.0 / 3000.0</item>
+        <item>1.0 / 300.0</item>
+        <item>1.0 / 30.0</item>
+        <item>1.0 / 3.0</item>
+        <item>10.0 / 3.0</item>
+        <item>500.0</item>
+        <item>1.0 / 3000.0</item>
+    </string-array>
+    <string-array name="spac">
+        <item>Square meter(m^2)</item>
+        <item>Square decimeter(dm^2)</item>
+        <item>Square centimeter(cm^2)</item>
+        <item>Square kilometer(km^2)</item>
+        <item>Square millimeter(mm^2)</item>
+        <item>Are(ar)</item>
+        <item>Hectare(ha)</item>
+        <item>Square mile(mi^2)</item>
+        <item>Square rod(rd^2)</item>
+        <item>Square yard(yd^2)</item>
+        <item>Square foot(ft^2)</item>
+        <item>Acre(ac)</item>
+        <item>Square inch(in^2)</item>
+        <item>Square chi</item>
+        <item>Qing</item>
+        <item>Mu</item>
+        <item>Square cun</item>
+    </string-array>
+    <string-array name="Area_value">
+        <item>1.0</item>
+        <item>1.0e-6</item>
+        <item>0.0001</item>
+        <item>0.01</item>
+        <item>1000000.0</item>
+        <item>100.0</item>
+        <item>10000.0</item>
+        <item>0.00064516</item>
+        <item>0.09290304</item>
+        <item>0.83612736</item>
+        <item>25.29285264</item>
+        <item>4046.8564224</item>
+        <item>2589988.110336</item>
+        <item>0.001111111</item>
+        <item>0.111111111</item>
+        <item>666.6666666666667</item>
+        <item>66666.66666667</item>
+    </string-array>
 </resources>

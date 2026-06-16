@@ -27,30 +27,31 @@
         <item name="android:insetTop">5dp</item>
         <item name="android:insetLeft">5dp</item>
         <item name="android:insetRight">5dp</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">8sp</item>
 <!--        <item name="android:padding">5dp</item>-->
         <item name="android:backgroundTint">?attr/calcButtonBackground</item>
         <item name="android:textColor">?attr/calcButtonText</item>
         <item name="cornerRadius">16dp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
         <style name="KeyButton">
-            <item name="android:layout_width">78dp</item>
-            <item name="android:layout_height">78dp</item>
+            <item name="android:layout_width">70dp</item>
+            <item name="android:layout_height">70dp</item>
             <item name="android:layout_margin">8dp</item>
             <item name="android:background">@drawable/keypad_button_bg</item>
             <item name="android:textColor">@android:color/white</item>
-            <item name="android:textSize">26sp</item>
+            <item name="android:textSize">20sp</item>
             <item name="android:textStyle">bold</item>
         </style>
 
         <style name="SideButton">
-            <item name="android:layout_width">78dp</item>
-            <item name="android:layout_height">164dp</item>
+            <item name="android:layout_width">60dp</item>
+            <item name="android:layout_height">160dp</item>
             <item name="android:layout_margin">8dp</item>
             <item name="android:background">@drawable/keypad_button_bg</item>
             <item name="android:textColor">@android:color/white</item>
-            <item name="android:textSize">24sp</item>
+            <item name="android:textSize">22sp</item>
             <item name="android:textStyle">bold</item>
         </style>
 

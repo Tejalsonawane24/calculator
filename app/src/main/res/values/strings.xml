@@ -149,6 +149,7 @@
         <item>1375.0</item> <!-- KRW -->
         <item>25.20</item>
     </string-array>
+
     <string-array name="lcsp1">
         <item>Decimeter(dm)</item>
         <item>Light year(ly)</item>
@@ -205,6 +206,7 @@
         <item>500.0</item>
         <item>1.0 / 3000.0</item>
     </string-array>
+
     <string-array name="spac">
         <item>Square meter(m^2)</item>
         <item>Square decimeter(dm^2)</item>
@@ -242,5 +244,42 @@
         <item>0.111111111</item>
         <item>666.6666666666667</item>
         <item>66666.66666667</item>
+    </string-array>
+
+    <string-array name="spvc">
+        <item>hectlitre(hl)</item>
+        <item>Cubic meter(m^3)</item>
+        <item>Cubic centimeter(cm^3)</item>
+        <item>Decilitre(dl)</item>
+        <item>Centilitre(cl)</item>
+        <item>Cubic decimter(dm^3)</item>
+        <item>Litre(l)</item>
+        <item>Millilitre(ml)</item>
+        <item>Cubic foot(ft^3)</item>
+        <item>US fluid ounce(US fl oz)</item>
+        <item>Cubic yard(yd^3)</item>
+        <item>Cubic inch(in^3)</item>
+        <item>Acre-foot(af^3)</item>
+        <item>UK gallon(UK gal)</item>
+        <item>US gallon(US gal)</item>
+        <item>UK fluid ounce(UK fl oz)</item>
+    </string-array>
+    <string-array name="volume_value">
+        <item>100.0</item>
+        <item>1000.0</item>
+        <item>0.001</item>
+        <item>0.1</item>
+        <item>0.01</item>
+        <item>0.1</item>
+        <item>1.0</item>
+        <item>0.001</item>
+        <item>28.316846592</item>
+        <item>0.0295735295625</item>
+        <item>764.554857984</item>
+        <item>0.016387064</item>
+        <item>1233481.8375475</item>
+        <item>4.54609</item>
+        <item>3.785411784</item>
+        <item>0.0284130625</item>
     </string-array>
 </resources>

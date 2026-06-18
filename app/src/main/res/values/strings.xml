@@ -282,4 +282,49 @@
         <item>3.785411784</item>
         <item>0.0284130625</item>
     </string-array>
+
+    <string-array name="spwc">
+        <item>Gram (g)</item>
+        <item>Microgram</item>
+        <item>Quintal(q)</item>
+        <item>Carat (ct)</item>
+        <item>Tonne (t)</item>
+        <item>Milligram(mg)</item>
+        <item>Kilogram (kg)</item>
+        <item>Short ton</item>
+        <item>Long ton(lt)</item>
+        <item>Ounce(oz)</item>
+        <item>Grain(gr)</item>
+        <item>Dram(dr)</item>
+        <item>Short hundredweight</item>
+        <item>Pound(lb)</item>
+        <item>Stone(st)</item>
+        <item>Long hundrendweight(lg cwt)</item>
+        <item>Jin</item>
+        <item>Dan</item>
+        <item>Qian</item>
+        <item>Liang</item>
+    </string-array>
+    <string-array name="weight_value">
+        <item>0.001</item>
+        <item>1.0e-9</item>
+        <item>100.0</item>
+        <item>0.0002</item>
+        <item>1000.0</item>
+        <item>0.000001</item>
+        <item>1.0</item>
+        <item>907.18474</item>
+        <item>1016.0469088</item>
+        <item>0.028349523125</item>
+        <item>0.00006479891</item>
+        <item>0.001771851953125</item>
+        <item>45.359237</item>
+        <item>0.453592237</item>
+        <item>6.35029318</item>
+        <item>50.80234544</item>
+        <item>0.5</item>
+        <item>50.0</item>
+        <item>0.005</item>
+        <item>0.05</item>
+    </string-array>
 </resources>

@@ -11,7 +11,7 @@
     <ImageButton
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:id="@+id/btnBackWp"
+        android:id="@+id/btnBackTp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:src="@android:drawable/ic_media_previous"
@@ -23,25 +23,25 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/TexttitleWp"
-        android:text="Weight Convertor"
+        android:id="@+id/TexttitleTp"
+        android:text="Temprature Convertor"
         android:textColor="?attr/calcButtonText"
         android:backgroundTint="?attr/calcButtonBackground"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginStart="12dp"
-        app:layout_constraintStart_toEndOf="@+id/btnBackWp"
-        app:layout_constraintTop_toTopOf="@+id/btnBackWp"/>
+        app:layout_constraintStart_toEndOf="@+id/btnBackTp"
+        app:layout_constraintTop_toTopOf="@+id/btnBackTp"/>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/topContainerWp"
+        android:id="@+id/topContainerTp"
         android:orientation="vertical"
         android:layout_marginTop="24dp"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="14dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnBackWp"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackTp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="?attr/calcButtonBackground">
@@ -55,14 +55,14 @@
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/spw1"
+                android:id="@+id/spt1"
                 android:minHeight="45dp"
                 android:textColor="?attr/calcButtonText"
                 android:backgroundTint="?attr/calcButtonBackground"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/edwc1"
+                android:id="@+id/edtc1"
                 android:backgroundTint="?attr/calcButtonBackground"
                 android:textColor="?attr/calcButtonText"
                 android:textSize="24sp"
@@ -82,7 +82,7 @@
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/spwc2"
+                android:id="@+id/sptc2"
                 android:minHeight="45dp"
                 android:textColor="?attr/calcButtonText"
                 android:backgroundTint="?attr/calcButtonBackground"/>
@@ -94,83 +94,83 @@
                 android:textSize="24sp"
                 android:text="100"
                 android:textStyle="bold"
-                android:id="@+id/edwc2"/>
+                android:id="@+id/edtc2"/>
         </LinearLayout>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@+id/topContainerWp"
+        app:layout_constraintTop_toBottomOf="@+id/topContainerTp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/wspace1"/>
+        android:id="@+id/tspace1"/>
     <GridLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/keypadw"
+        android:id="@+id/keypadt"
         android:columnCount="4"
         android:rowCount="4"
         android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/wspace1"
+        app:layout_constraintTop_toBottomOf="@+id/tspace1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
         <Button
-            android:id="@+id/wcbtn7"
+            android:id="@+id/tcbtn7"
             style="@style/KeyButton"
             android:text="7"/>
         <Button
-            android:id="@+id/wcbtn8"
+            android:id="@+id/tcbtn8"
             style="@style/KeyButton"
             android:text="8"/>
         <Button
-            android:id="@+id/wcbtn9"
+            android:id="@+id/tcbtn9"
             style="@style/KeyButton"
             android:text="9"/>
         <Button
-            android:id="@+id/wcbtnAC"
+            android:id="@+id/tcbtnAC"
             style="@style/SideButton"
             android:text="AC"
             android:layout_rowSpan="2"/>
         <Button
-            android:id="@+id/wcbtn4"
+            android:id="@+id/tcbtn4"
             style="@style/KeyButton"
             android:text="4"/>
         <Button
-            android:id="@+id/wcbtn5"
+            android:id="@+id/tcbtn5"
             style="@style/KeyButton"
             android:text="5"/>
         <Button
-            android:id="@+id/wcbtn6"
+            android:id="@+id/tcbtn6"
             style="@style/KeyButton"
             android:text="6"/>
         <Button
-            android:id="@+id/wcbtn1"
+            android:id="@+id/tcbtn1"
             style="@style/KeyButton"
             android:text="1"/>
         <Button
-            android:id="@+id/wcbtn2"
+            android:id="@+id/tcbtn2"
             style="@style/KeyButton"
             android:text="2"/>
         <Button
-            android:id="@+id/wcbtn3"
+            android:id="@+id/tcbtn3"
             style="@style/KeyButton"
             android:text="3"/>
         <Button
-            android:id="@+id/wcbtndelete"
+            android:id="@+id/tcbtndelete"
             style="@style/SideButton"
             android:text="⌫"
             android:layout_rowSpan="2"/>
         <Button
-            android:id="@+id/wcbtn00"
+            android:id="@+id/tcbtn00"
             style="@style/KeyButton"
             android:text="00"
             android:textSize="18sp"/>
         <Button
-            android:id="@+id/wcbtn0"
+            android:id="@+id/tcbtn0"
             style="@style/KeyButton"
             android:text="0"/>
         <Button
-            android:id="@+id/wcbtndot"
+            android:id="@+id/tcbtndot"
             style="@style/KeyButton"
             android:text="."/>
     </GridLayout>

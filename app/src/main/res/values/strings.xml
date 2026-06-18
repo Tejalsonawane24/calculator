@@ -327,4 +327,14 @@
         <item>0.005</item>
         <item>0.05</item>
     </string-array>
+
+    <string-array name="sptc">
+        <item>Degree Rankine(R)</item>
+        <item>Degree Celsius(C)</item>
+        <item>Degree Reaumur(Re)</item>
+        <item>Degree Fahrenheit(F)</item>
+        <item>Kelvin(K)</item>
+    </string-array>
+
+
 </resources>

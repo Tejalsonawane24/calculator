@@ -336,5 +336,13 @@
         <item>Kelvin(K)</item>
     </string-array>
 
-
+    <string-array name="spsc">
+        <item>Speed of light</item>
+        <item>Kilometer/second(km/s)</item>
+        <item>Mile/hour(mph)</item>
+        <item>Mach(Ma)</item>
+        <item>Inch/second(in/s)</item>
+        <item>Meter/second(m/s)</item>
+        <item>Kilometer/hour(km/h)</item>
+    </string-array>
 </resources>

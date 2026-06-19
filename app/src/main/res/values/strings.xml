@@ -355,6 +355,37 @@
         <item>0.2777777777778</item>
     </string-array>
 
+    <string-array name="spprc">
+        <item>Millimeter of water(mmH2O)</item>
+        <item>Pounds/square foot(psf)</item>
+        <item>Kilogram-force/square centimeter(kgf/cm^2)</item>
+        <item>Pounds/square inch</item>
+        <item>Millimeter of mercury(mmHg)</item>
+        <item>Bar</item>
+        <item>Inch of mercury(inHg)</item>
+        <item>Millibar (mbar)</item>
+        <item>Hectopascal(hPa)</item>
+        <item>Standard atmosphere(atm)</item>
+        <item>Kilopascal(kPa)</item>
+        <item>Kilogram-force/square meter(kgf/m^2)</item>
+        <item>Megapascal(MPa)</item>
+    </string-array>
+    <string-array name="pressure_value">
+        <item>133.322387415</item>
+        <item>47.88025898</item>
+        <item>98066.5</item>
+        <item>6894.757293168</item>
+        <item>133.322387415</item>
+        <item>100000.0</item>
+        <item>3386.389</item>
+        <item>100.0</item>
+        <item>100.0</item>
+        <item>101325.0</item>
+        <item>1000.0</item>
+        <item>9.806665</item>
+        <item>1000000.0</item>
+    </string-array>
+
     <string-array name="sppc">
         <item>Joule/second(J/s)</item>
         <item>British thermal unit/second(Btu/s)</item>

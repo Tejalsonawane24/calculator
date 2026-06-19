@@ -410,4 +410,11 @@
         <item>1.0</item>
         <item>1000.0</item>
     </string-array>
+
+    <string-array name="spnc">
+        <item>Binary BIN</item>
+        <item>Octal OCT</item>
+        <item>Decimal DEC</item>
+        <item>Hexadecimal HEX</item>
+    </string-array>
 </resources>

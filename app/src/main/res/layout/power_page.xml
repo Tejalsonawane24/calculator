@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/TexttitlePp"
-        android:text="Weight Convertor"
+        android:text="Power Convertor"
         android:textColor="?attr/calcButtonText"
         android:backgroundTint="?attr/calcButtonBackground"
         android:textSize="20sp"

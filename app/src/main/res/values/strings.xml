@@ -345,4 +345,38 @@
         <item>Meter/second(m/s)</item>
         <item>Kilometer/hour(km/h)</item>
     </string-array>
+    <string-array name="speed_value">
+        <item>299792458.0</item>
+        <item>1000.0</item>
+        <item>0.44704</item>
+        <item>340.29</item>
+        <item>0.0254</item>
+        <item>1.0</item>
+        <item>0.2777777777778</item>
+    </string-array>
+
+    <string-array name="sppc">
+        <item>Joule/second(J/s)</item>
+        <item>British thermal unit/second(Btu/s)</item>
+        <item>Metric horsepower(PS)</item>
+        <item>Kilogram-meter/second(kg.m/s)</item>
+        <item>Kilocalorie/second</item>
+        <item>Watt(W)</item>
+        <item>Imperial horsepower(HP)</item>
+        <item>Foot-pound/second(ft-lb/s)</item>
+        <item>Newton-meter/second(N.m/s)</item>
+        <item>Kilowatt</item>
+    </string-array>
+    <string-array name="power_value">
+        <item>1.0</item>
+        <item>1055.05585262</item>
+        <item>735.49875</item>
+        <item>9.80665</item>
+        <item>4184.0</item>
+        <item>1.0</item>
+        <item>745.69987158227</item>
+        <item>1.3558179483314</item>
+        <item>1.0</item>
+        <item>1000.0</item>
+    </string-array>
 </resources>

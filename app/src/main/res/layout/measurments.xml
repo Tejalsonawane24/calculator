@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1C1C1E"
     android:fitsSystemWindows="true">
+
+    <!-- HEADER TOP BAR -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,25 +15,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="horizontal"
+        android:padding="8dp"
         android:gravity="center_vertical">
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:text="b"
-            android:textSize="12sp"
-            android:backgroundTint="?attr/calcButtonBackground"
-            android:textColor="?attr/calcButtonText"
+
+        <ImageButton
             android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            android:tint="?attr/calcButtonText"
+            android:contentDescription="Go Back"
             android:onClick="showHome"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unit Converter"
-            android:textSize="20sp"
-            android:textAlignment="inherit"
-            android:textColor="?attr/calcButtonText"
-            android:backgroundTint="?attr/calcButtonBackground"/>
+            android:text="Unit converter"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            android:textColor="?attr/calcButtonText"/>
     </LinearLayout>
+
+    <!-- GRID SECTIONS AREA -->
     <GridLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -41,62 +49,100 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_weight="6"
-        android:padding="10dp">
+        android:padding="12dp">
+
         <Button
             android:id="@+id/currency"
-            android:text="Currency"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/outline_attach_money_24"
+            android:text="Currency"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showCurrency"/>
+
         <Button
             android:id="@+id/length"
             android:text="Length"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/ic_length"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showLength"/>
+
         <Button
             android:id="@+id/area"
             android:text="Area"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/ic_area"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showArea"/>
+
         <Button
             android:id="@+id/volume"
             android:text="Volume"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/ic_volume"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showVolume"/>
+
         <Button
             android:id="@+id/weight"
             android:text="Weight"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/ic_weight"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showWeight"/>
+
         <Button
             android:id="@+id/temprature"
-            android:text="Temprature"
+            android:text="Temperature"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/outline_device_thermostat_24"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showTemprature"/>
+
         <Button
             android:id="@+id/speed"
             android:text="Speed"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/ic_speed"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showSpeed"/>
+
         <Button
             android:id="@+id/pressure"
             android:text="Pressure"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/ic_pressure"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showPressure"/>
+
         <Button
             android:id="@+id/power"
             android:text="Power"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/outline_electric_bolt_24"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showPower"/>
+
         <Button
             android:id="@+id/numbersys"
-            android:text="Number System"
+            android:text="Number system"
             style="@style/unitconbtn"
+            android:drawableTop="@drawable/ic_number_sys"
+            android:drawablePadding="4dp"
+            android:gravity="center"
             android:onClick="showNumberSys"/>
 
-       <View style="@style/unitconbtn"/>
-        <View style="@style/unitconbtn"/>
-        <View style="@style/unitconbtn"/>
+        <View style="@style/unitconbtn" android:visibility="invisible"/>
+        <View style="@style/unitconbtn" android:visibility="invisible"/>
     </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

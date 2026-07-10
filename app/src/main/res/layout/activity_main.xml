@@ -26,8 +26,8 @@
             android:textOn=""
             android:textOff=""
             android:background="@drawable/ic_scientific_mode"
-            app:tint="?attr/calcButtonText"
-            android:backgroundTint="?attr/calcButtonBackground"/>
+            app:tint="?attr/calcButtonBackground"
+            android:backgroundTint="?attr/calcButtonText"/>
 
         <!-- Measurement Page Link Button: Converted to ImageButton for exact centering -->
         <ImageButton

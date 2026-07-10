@@ -3,25 +3,38 @@ package com.example.calculator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import android.widget.ToggleButton;
 import androidx.appcompat.app.AppCompatActivity;
 
+// Firebase Imports
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
-    // Defining layout components
     private EditText ed1, ed2;
     private GridLayout gridLayout;
     private ToggleButton mrbtn;
-    private View btnmrop; // Changed to view base to handle ImageButton / Button interchangeably safely
+    private View btnmrop;
+    private ImageButton moreOptionBtn;
 
-    // Track the active string formula input
     private String currentExpression = "";
 
-    // Button sets for grid state transformations
+    // Firebase Database Reference
+    private DatabaseReference mDatabase;
+
     private final String[] expandKeys = {
             "sin", "cos", "tan", "rad", "deg", "log", "Ln",
             "(", ")", "inv", "!", "AC", "%", "Er", "/", "^",
@@ -42,61 +55,85 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Binding UI element identifiers
+        // Replace the URL with the exact one shown at the top of your Firebase Console
+        mDatabase = FirebaseDatabase.getInstance("https://calculator-271ea-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference()
+                .child("history");
         ed1 = findViewById(R.id.text1);
         ed2 = findViewById(R.id.text2);
         gridLayout = findViewById(R.id.l3);
         mrbtn = findViewById(R.id.more_button);
         btnmrop = findViewById(R.id.measures);
+        moreOptionBtn = findViewById(R.id.moreoption);
 
-        // Fail-fast safety checks for layout integrity
-        if (ed2 == null || ed1 == null) {
-            throw new IllegalStateException("EditText views not found in layout configuration");
-        }
-        if (gridLayout == null) {
-            throw new IllegalStateException("GridLayout with id l3 not found in layout");
+        if (ed2 == null || ed1 == null || gridLayout == null) {
+            throw new IllegalStateException("Required UI references missing from layout configuration");
         }
 
-        // Set initial alpha state for the toggle button to indicate unchecked status
-        if (mrbtn != null) {
-            mrbtn.setAlpha(0.6f);
-        }
+        if (mrbtn != null) mrbtn.setAlpha(0.6f);
 
-        // Initialize the basic 4x5 calculator interface layout view state
         collapseGrid();
 
-        // Listener handling grid state shifts between basic and scientific views
         mrbtn.setOnCheckedChangeListener((buttonView, isChecked) -> {
             try {
                 if (isChecked) {
-                    mrbtn.setAlpha(1.0f); // Bright highlight when active
+                    mrbtn.setAlpha(1.0f);
                     expandGrid();
                 } else {
-                    mrbtn.setAlpha(0.6f); // Slightly faded when scientific mode is off
+                    mrbtn.setAlpha(0.6f);
                     collapseGrid();
                 }
             } catch (Exception e) {
                 Log.e("CalculatorError", "Error toggling grid: " + e.getMessage());
             }
         });
+
+        if (moreOptionBtn != null) {
+            moreOptionBtn.setOnClickListener(this::showPopupMenu);
+        }
+    }
+
+    private void showPopupMenu(View view) {
+        PopupMenu popup = new PopupMenu(MainActivity.this, view);
+        popup.getMenuInflater().inflate(R.menu.main_menu, popup.getMenu());
+        popup.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.action_history) {
+                Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            return false;
+        });
+        popup.show();
     }
 
     /**
-     * Standard click intent mapping targeting external measurements dashboard activity
+     * Pushes a completed calculation item directly into the Firebase database
      */
+    private void saveCalculationToFirebase(String expression, String result) {
+        String timestamp = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
+
+        Map<String, Object> historyItem = new HashMap<>();
+        historyItem.put("expression", expression);
+        historyItem.put("result", result);
+        historyItem.put("date", timestamp);
+
+        mDatabase.push().setValue(historyItem)
+                .addOnSuccessListener(aVoid -> {
+                    Log.d("FirebaseSuccess", "Data successfully saved to cloud!");
+                })
+                .addOnFailureListener(e -> {
+                    Log.e("FirebaseError", "Write failed deeply: " + e.getMessage());
+                    e.printStackTrace();
+                });
+    }
+
     public void showMeasurements(View view) {
         Intent intent = new Intent(getApplicationContext(), Measurements.class);
         startActivity(intent);
     }
 
-    /**
-     * Programmatically generates uniform grid buttons matching custom layouts
-     */
     private Button createStyledButton(String text) {
-        if (gridLayout == null) {
-            throw new IllegalStateException("gridLayout component context missing references");
-        }
-
         Button button = (Button) getLayoutInflater().inflate(R.layout.item_calc_button, gridLayout, false);
         button.setText(text);
 
@@ -111,33 +148,21 @@ public class MainActivity extends AppCompatActivity {
         return button;
     }
 
-    /**
-     * Shifts layout to Expanded Scientific Mode (7 Rows x 5 Columns)
-     */
     private void expandGrid() {
-        if (gridLayout == null || ed2 == null) return;
-
         gridLayout.removeAllViews();
         gridLayout.setRowCount(7);
         gridLayout.setColumnCount(5);
-
         for (String key : expandKeys) {
             Button button = createStyledButton(key);
-            button.setTextSize(13); // Scale down font sizes to match higher grid density elements
+            button.setTextSize(13);
             gridLayout.addView(button);
         }
     }
 
-    /**
-     * Shifts layout to standard Simple Mode (5 Rows x 4 Columns)
-     */
     private void collapseGrid() {
-        if (gridLayout == null || ed2 == null) return;
-
         gridLayout.removeAllViews();
         gridLayout.setRowCount(5);
         gridLayout.setColumnCount(4);
-
         for (String key : originalKeys) {
             Button button = createStyledButton(key);
             button.setTextSize(24);
@@ -145,24 +170,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Core state controller capturing, handling, and parsing button events
-     */
     public void onCalculatorButtonPressed(String key) {
-        if (ed2 == null || ed1 == null) return;
-
         switch (key) {
             case "AC":
-                // Completely resets evaluation workspaces
                 currentExpression = "";
                 ed1.setText("");
                 ed2.setText("0");
                 break;
 
             case "Er":
-                // Single-character string backspace routine
                 if (currentExpression.length() > 0) {
-                    // Check if we are deleting an entire functional token like "sin(" to keep backspacing clean
                     if (currentExpression.endsWith("sin(") || currentExpression.endsWith("cos(") || currentExpression.endsWith("tan(") || currentExpression.endsWith("log(")) {
                         currentExpression = currentExpression.substring(0, currentExpression.length() - 4);
                     } else if (currentExpression.endsWith("Ln(")) {
@@ -175,18 +192,17 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case "=":
-                // Evaluates formula models and safely manages outputs
                 if (!currentExpression.isEmpty()) {
                     try {
                         ed1.setText(currentExpression);
                         double result = evaluateExpression(currentExpression);
 
-                        // Clean display formats: strips floating decimals off whole integer values
-                        if (result == (long) result) {
-                            currentExpression = String.valueOf((long) result);
-                        } else {
-                            currentExpression = String.valueOf(result);
-                        }
+                        String finalResult = (result == (long) result) ? String.valueOf((long) result) : String.valueOf(result);
+
+                        // Push to Firebase Realtime Database
+                        saveCalculationToFirebase(currentExpression, finalResult);
+
+                        currentExpression = finalResult;
                         ed2.setText(currentExpression);
                     } catch (Exception e) {
                         ed2.setText("Error");
@@ -196,138 +212,78 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case "X":
-                // Standardize layout view symbols to native mathematical evaluation tokens
                 currentExpression += "*";
                 ed2.setText(currentExpression);
                 break;
 
-            // Automatically open parameters parenthesis for nested expressions to prevent runtime engine crash
             case "sin":
             case "cos":
             case "tan":
             case "log":
             case "Ln":
-                if (currentExpression.equals("0")) {
-                    currentExpression = key + "(";
-                } else {
-                    currentExpression += key + "(";
-                }
+                currentExpression = currentExpression.equals("0") ? key + "(" : currentExpression + (key + "(");
                 ed2.setText(currentExpression);
                 break;
 
             default:
-                // Handles continuous numerical digit array streams dynamically
-                if (currentExpression.equals("0") && !key.equals(".")) {
-                    currentExpression = key;
-                } else {
-                    currentExpression += key;
-                }
+                currentExpression = (currentExpression.equals("0") && !key.equals(".")) ? key : currentExpression + key;
                 ed2.setText(currentExpression);
                 break;
         }
     }
 
-    /**
-     * Mathematical compilation engine optimizing high, mid, and low priority operator rules
-     */
     private double evaluateExpression(String expression) {
-        // Drop any spaces or hidden layout fragments
         final String cleanExpression = expression.replaceAll("\\s+", "");
-
         return new Object() {
             int pos = -1, ch;
-
-            void nextChar() {
-                ch = (++pos < cleanExpression.length()) ? cleanExpression.charAt(pos) : -1;
-            }
-
+            void nextChar() { ch = (++pos < cleanExpression.length()) ? cleanExpression.charAt(pos) : -1; }
             boolean eat(int charToEat) {
                 while (ch == ' ') nextChar();
-                if (ch == charToEat) {
-                    nextChar();
-                    return true;
-                }
+                if (ch == charToEat) { nextChar(); return true; }
                 return false;
             }
-
-            double parse() {
-                nextChar();
-                double x = parseExpression();
-                if (pos < cleanExpression.length()) throw new RuntimeException("Unexpected character sequence");
-                return x;
-            }
-
-            // Low-Priority Phase: Addition (+) and Subtraction (-)
+            double parse() { nextChar(); double x = parseExpression(); return x; }
             double parseExpression() {
                 double x = parseTerm();
                 for (; ; ) {
-                    if      (eat('+')) x += parseTerm();
+                    if (eat('+')) x += parseTerm();
                     else if (eat('-')) x -= parseTerm();
                     else return x;
                 }
             }
-
-            // Mid-Priority Phase: Multiplication (*) and Division (/)
             double parseTerm() {
                 double x = parseFactor();
                 for (; ; ) {
-                    if      (eat('*')) x *= parseFactor();
+                    if (eat('*')) x *= parseFactor();
                     else if (eat('/')) {
                         double divisor = parseFactor();
-                        if (divisor == 0) throw new ArithmeticException("Divide by zero exception");
+                        if (divisor == 0) throw new ArithmeticException();
                         x /= divisor;
                     }
                     else return x;
                 }
             }
-
-            // High-Priority Phase: Values, explicit signs, brackets, string functions, and exponents
             double parseFactor() {
-                if (eat('-')) return -parseFactor(); // Unary negation support
+                if (eat('-')) return -parseFactor();
                 if (eat('+')) return parseFactor();
-
-                double x;
-                int startPos = this.pos;
-                if (eat('(')) { // Bracket sub-expressions resolution
-                    x = parseExpression();
-                    eat(')');
-                } else if ((ch >= '0' && ch <= '9') || ch == '.') { // Text number extraction loops
+                double x; int startPos = this.pos;
+                if (eat('(')) { x = parseExpression(); eat(')'); }
+                else if ((ch >= '0' && ch <= '9') || ch == '.') {
                     while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
                     x = Double.parseDouble(cleanExpression.substring(startPos, this.pos));
-                } else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) { // Functional key identity monitoring
+                } else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
                     while ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) nextChar();
                     String func = cleanExpression.substring(startPos, this.pos);
-
-                    // Run a inner parsing cycle on everything inside the parameter boundary brackets
                     x = parseFactor();
-
-                    // Structural mapping routing text strings directly to strict arithmetic operations
                     switch (func) {
-                        case "sin":
-                            x = Math.sin(Math.toRadians(x)); // Java assumes input is in Radians, we explicitly pass Degrees
-                            break;
-                        case "cos":
-                            x = Math.cos(Math.toRadians(x));
-                            break;
-                        case "tan":
-                            x = Math.tan(Math.toRadians(x));
-                            break;
-                        case "log":
-                            x = Math.log10(x);
-                            break;
-                        case "Ln":
-                            x = Math.log(x);
-                            break;
-                        default:
-                            throw new RuntimeException("Unknown function execution target: " + func);
+                        case "sin": x = Math.sin(Math.toRadians(x)); break;
+                        case "cos": x = Math.cos(Math.toRadians(x)); break;
+                        case "tan": x = Math.tan(Math.toRadians(x)); break;
+                        case "log": x = Math.log10(x); break;
+                        case "Ln": x = Math.log(x); break;
                     }
-                } else {
-                    throw new RuntimeException("Syntax validation mismatch");
-                }
-
-                // Power/Exponent math parsing phase rules implementation
+                } else { throw new RuntimeException(); }
                 if (eat('^')) x = Math.pow(x, parseFactor());
-
                 return x;
             }
         }.parse();

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_history_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Expression (e.g., 43,464 - 35,643) -->
+    <TextView
+        android:id="@+id/card_expression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#8E8E93"
+        android:textSize="16sp" />
+
+    <!-- Result (e.g., 7,821) -->
+    <TextView
+        android:id="@+id/card_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Date (e.g., 10/07/2026) -->
+    <TextView
+        android:id="@+id/card_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="00/00/0000"
+        android:textColor="#636366"
+        android:textSize="12sp" />
+</LinearLayout>

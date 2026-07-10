@@ -1,17 +1,19 @@
 plugins {
     alias(libs.plugins.android.application)
+    // REMOVED: id 'com.android.' (This was the cause of your error)
+    id 'com.google.gms.google-services'
 }
 
 android {
     namespace 'com.example.calculator'
-    compileSdk {
-        version = release(36)
-    }
+
+    // FIXED: Changed from version = release(36) to standard syntax
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.calculator"
         minSdk 27
-        targetSdk 36
+        targetSdk 36 // Matches compileSdk
         versionCode 1
         versionName "1.0"
 
@@ -31,6 +33,7 @@ android {
 }
 
 dependencies {
+    // Use the version catalog (libs.xxx) exclusively to avoid conflicts
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
@@ -38,10 +41,13 @@ dependencies {
     implementation libs.gridlayout
     implementation libs.recyclerview
     implementation libs.play.services.maps
+
+    // If firebase-database isn't in your catalog yet, keep this one:
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
-        implementation 'androidx.appcompat:appcompat:1.6.1'
-        implementation 'com.google.android.material:material:1.11.0'
-        implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // REMOVED: Hardcoded duplicate implementations that were listed below
 }

@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- TOP LEFT: Square Root Symbol (√) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M3,8 L4.5,8 L5.5,11 L7.5,5 L11,5 L11,6.5 L8.5,6.5 L6.5,12.5 L4.5,12.5 L3.5,9.5 L3,9.5 Z"/>
+
+    <!-- TOP RIGHT: Pi Symbol (π) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M13,5 L20,5 L20,6.5 L18.5,6.5 L18.5,12 L17,12 L17,6.5 L15,6.5 L15,11.5 C15,12.2 14.6,12.5 13.8,12.5 L13.5,12.5 L13,12.5 L13,11 L13.5,11 L13.5,6.5 L13,6.5 Z"/>
+
+    <!-- BOTTOM LEFT: Perfect Clean 'e' Constant Symbol -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 6.5,15 C 5.12,15 4,16.12 4,17.5 C 4,18.88 5.12,20 6.5,20 C 7.65,20 8.6,19.22 8.88,18.15 L 7.35,18.15 C 7.15,18.4 6.85,18.55 6.5,18.55 C 6.05,18.55 5.65,18.2 5.52,17.75 L 9,17.75 L 9,17.45 C 9,16.08 7.88,15 6.5,15 Z M 5.52,16.65 C 5.65,16.2 6.05,15.85 6.5,15.85 C 6.95,15.85 7.35,16.2 7.48,16.65 L 5.52,16.65 Z"/>
+
+    <!-- BOTTOM RIGHT: Equal Sign (=) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,16.5 H18 V17.5 H12 Z M12,18.5 H18 V19.5 H12 Z"/>
+</vector>

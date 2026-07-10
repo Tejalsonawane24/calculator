@@ -23,21 +23,29 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/more_button"
-            android:textOn="h"
-            android:textOff="l"/>
-       <Button
-           android:layout_width="50dp"
-           android:layout_height="50dp"
-           android:id="@+id/measures"
-           android:text="m"
-           android:onClick="showMeasurements"/>
+            android:textOn=""
+            android:textOff=""
+            android:background="@drawable/ic_scientific_mode"
+            app:tint="?attr/calcButtonText"
+            android:backgroundTint="?attr/calcButtonBackground"/>
+
+        <!-- Measurement Page Link Button: Converted to ImageButton for exact centering -->
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/measures"
+            android:src="@drawable/ic_measurements"
+            app:tint="?attr/calcButtonText"
+            android:backgroundTint="?attr/calcButtonBackground"
+            android:onClick="showMeasurements"/>
 
         <ImageButton
             android:id="@+id/moreoption"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/baseline_more_vert_24"
-            />
+            app:tint="?attr/calcButtonText"
+            android:backgroundTint="?attr/calcButtonBackground"/>
     </LinearLayout>
 
     <LinearLayout

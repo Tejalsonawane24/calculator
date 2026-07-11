@@ -207,44 +207,49 @@
         <item>1.0 / 3000.0</item>
     </string-array>
 
-    <string-array name="spac">
-        <item>Square meter(m^2)</item>
-        <item>Square decimeter(dm^2)</item>
-        <item>Square centimeter(cm^2)</item>
-        <item>Square kilometer(km^2)</item>
-        <item>Square millimeter(mm^2)</item>
-        <item>Are(ar)</item>
-        <item>Hectare(ha)</item>
-        <item>Square mile(mi^2)</item>
-        <item>Square rod(rd^2)</item>
-        <item>Square yard(yd^2)</item>
-        <item>Square foot(ft^2)</item>
-        <item>Acre(ac)</item>
-        <item>Square inch(in^2)</item>
-        <item>Square chi</item>
-        <item>Qing</item>
-        <item>Mu</item>
-        <item>Square cun</item>
-    </string-array>
-    <string-array name="Area_value">
-        <item>1.0</item>
-        <item>1.0e-6</item>
-        <item>0.0001</item>
-        <item>0.01</item>
-        <item>1000000.0</item>
-        <item>100.0</item>
-        <item>10000.0</item>
-        <item>0.00064516</item>
-        <item>0.09290304</item>
-        <item>0.83612736</item>
-        <item>25.29285264</item>
-        <item>4046.8564224</item>
-        <item>2589988.110336</item>
-        <item>0.001111111</item>
-        <item>0.111111111</item>
-        <item>666.6666666666667</item>
-        <item>66666.66666667</item>
-    </string-array>
+
+        <!-- Spinner Label Strings -->
+        <string-array name="spac">
+            <item>Square meter(m^2)</item>
+            <item>Square decimeter(dm^2)</item>
+            <item>Square centimeter(cm^2)</item>
+            <item>Square kilometer(km^2)</item>
+            <item>Square millimeter(mm^2)</item>
+            <item>Are(ar)</item>
+            <item>Hectare(ha)</item>
+            <item>Square mile(mi^2)</item>
+            <item>Square rod(rd^2)</item>
+            <item>Square yard(yd^2)</item>
+            <item>Square foot(ft^2)</item>
+            <item>Acre(ac)</item>
+            <item>Square inch(in^2)</item>
+            <item>Square chi</item>
+            <item>Qing</item>
+            <item>Mu</item>
+            <item>Square cun</item>
+        </string-array>
+
+        <!-- Mathematical Multipliers (Relative to 1 Square Meter) -->
+        <string-array name="Area_value">
+            <item>1.0</item>        <!-- m^2 -->
+            <item>0.01</item>       <!-- dm^2 -->
+            <item>0.0001</item>     <!-- cm^2 -->
+            <item>1000000.0</item>  <!-- km^2 -->
+            <item>0.000001</item>   <!-- mm^2 -->
+            <item>100.0</item>      <!-- ar -->
+            <item>10000.0</item>    <!-- ha -->
+            <item>2589988.11</item> <!-- mi^2 -->
+            <item>25.2928526</item> <!-- rd^2 -->
+            <item>0.83612736</item> <!-- yd^2 -->
+            <item>0.09290304</item> <!-- ft^2 -->
+            <item>4046.85642</item> <!-- ac -->
+            <item>0.00064516</item> <!-- in^2 -->
+            <item>0.11111111</item> <!-- Square chi -->
+            <item>6666.66667</item> <!-- Qing -->
+            <item>666.666667</item> <!-- Mu -->
+            <item>0.00111111</item> <!-- Square cun -->
+        </string-array>
+
 
     <string-array name="spvc">
         <item>hectlitre(hl)</item>
